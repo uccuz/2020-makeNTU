@@ -19,21 +19,3 @@ void loop()
   Serial.println(sensorValue); //print the value to serial
   delay(200);
 }
-
-// callback for received data
-void receiveData(int byteCount){
-while(Wire.available()) {  //當I2C的buffer中有資料時進入迴圈
-  number = Wire.read();   //指定nubmer 等於讀取的訊息
-  Serial.print("data received: ");
-  Serial.println(number);
-
-  }
-}
-
-// callback for sending data
-void sendData(){
-  for (int i=0; i<4; i++)
-  {
-    Wire.write(dataArray[i]);  //data bytes are queued in local buffer
-  }
-}
