@@ -18,7 +18,7 @@ var clothing = [
 var zone = "Taipei";
 weather.setCity(zone);
 //這裡要設置apiKey
-var apiKey = "f7289cf999da9d21f8b828aa7659aea3";
+var apiKey = "";
 weather.setAPPID(apiKey);
 
 app.use(bodyParser.urlencoded({extended:true}));
